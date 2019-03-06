@@ -49,7 +49,9 @@ RUN mkdir -p /home/mozc_builder/work
 WORKDIR /home/mozc_builder/work
 
 ## NaCl SDK
-RUN curl -LO http://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/nacl_sdk.zip && unzip nacl_sdk.zip && rm nacl_sdk.zip
+RUN curl -LO https://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/nacl_sdk.zip && unzip nacl_sdk.zip && rm nacl_sdk.zip
+RUN cd nacl_sdk/sdk_cache && curl -LO https://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/naclsdk_manifest2.json
+RUN sed -i '/ca_certs/d' nacl_sdk/sdk_tools/download.py
 RUN cd nacl_sdk && ./naclsdk install pepper_49
 ENV NACL_SDK_ROOT /home/mozc_builder/work/nacl_sdk/pepper_49
 
