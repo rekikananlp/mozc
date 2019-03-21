@@ -158,7 +158,7 @@ void LoadConjugation(const string &filename,
     tmp.key_suffix   = ((fields[3] == "*") ? "" : fields[3]);
     (*output)[fields[0]].push_back(tmp);   // insert
 
-    if (tmp.form == "基本形") {
+    if (tmp.form == "基本形" && !(*baseform_map).count(fields[0])) {
       (*baseform_map)[fields[0]] = tmp;
     }
   }
