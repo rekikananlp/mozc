@@ -1,3 +1,20 @@
+// Copyright 2018-2019 rekikananlp
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+//
+// This code originates from Mozc licensed as follows:
+//
 // Copyright 2010-2018, Google Inc.
 // All rights reserved.
 //
@@ -67,6 +84,7 @@ import java.nio.charset.CodingErrorAction;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -321,7 +339,7 @@ class UserDictionaryUtil {
   /** A map from PosType to the string resource id for i18n. */
   private static final Map<PosType, Integer> POS_RESOURCE_MAP;
   static {
-    EnumMap<PosType, Integer> map = new EnumMap<PosType, Integer>(PosType.class);
+    LinkedHashMap<PosType, Integer> map = new LinkedHashMap<PosType, Integer>(PosType.values().length);
     map.put(PosType.NOUN, R.string.japanese_pos_noun);
     map.put(PosType.ABBREVIATION, R.string.japanese_pos_abbreviation);
     map.put(PosType.SUGGESTION_ONLY, R.string.japanese_pos_suggestion_only);
@@ -358,6 +376,29 @@ class UserDictionaryUtil {
     map.put(PosType.BA_GROUP1_VERB, R.string.japanese_pos_ba_group1_verb);
     map.put(PosType.HA_GROUP1_VERB, R.string.japanese_pos_ha_group1_verb);
     map.put(PosType.GROUP2_VERB, R.string.japanese_pos_group2_verb);
+    map.put(PosType.KA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ka_upper_bigrade_verb);
+    map.put(PosType.GA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ga_upper_bigrade_verb);
+    map.put(PosType.TA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ta_upper_bigrade_verb);
+    map.put(PosType.DA_UPPER_BIGRADE_VERB, R.string.japanese_pos_da_upper_bigrade_verb);
+    map.put(PosType.HA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ha_upper_bigrade_verb);
+    map.put(PosType.BA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ba_upper_bigrade_verb);
+    map.put(PosType.MA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ma_upper_bigrade_verb);
+    map.put(PosType.YA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ya_upper_bigrade_verb);
+    map.put(PosType.RA_UPPER_BIGRADE_VERB, R.string.japanese_pos_ra_upper_bigrade_verb);
+    map.put(PosType.A_LOWER_BIGRADE_VERB, R.string.japanese_pos_a_lower_bigrade_verb);
+    map.put(PosType.KA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ka_lower_bigrade_verb);
+    map.put(PosType.GA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ga_lower_bigrade_verb);
+    map.put(PosType.SA_LOWER_BIGRADE_VERB, R.string.japanese_pos_sa_lower_bigrade_verb);
+    map.put(PosType.ZA_LOWER_BIGRADE_VERB, R.string.japanese_pos_za_lower_bigrade_verb);
+    map.put(PosType.TA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ta_lower_bigrade_verb);
+    map.put(PosType.DA_LOWER_BIGRADE_VERB, R.string.japanese_pos_da_lower_bigrade_verb);
+    map.put(PosType.NA_LOWER_BIGRADE_VERB, R.string.japanese_pos_na_lower_bigrade_verb);
+    map.put(PosType.HA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ha_lower_bigrade_verb);
+    map.put(PosType.BA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ba_lower_bigrade_verb);
+    map.put(PosType.MA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ma_lower_bigrade_verb);
+    map.put(PosType.YA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ya_lower_bigrade_verb);
+    map.put(PosType.RA_LOWER_BIGRADE_VERB, R.string.japanese_pos_ra_lower_bigrade_verb);
+    map.put(PosType.WA_LOWER_BIGRADE_VERB, R.string.japanese_pos_wa_lower_bigrade_verb);
     map.put(PosType.KURU_GROUP3_VERB, R.string.japanese_pos_kuru_group3_verb);
     map.put(PosType.SURU_GROUP3_VERB, R.string.japanese_pos_suru_group3_verb);
     map.put(PosType.ZURU_GROUP3_VERB, R.string.japanese_pos_zuru_group3_verb);
@@ -420,6 +461,29 @@ class UserDictionaryUtil {
     map.put(PosType.BA_GROUP1_VERB, R.string.japanese_pos_for_dictionary_export_ba_group1_verb);
     map.put(PosType.HA_GROUP1_VERB, R.string.japanese_pos_for_dictionary_export_ha_group1_verb);
     map.put(PosType.GROUP2_VERB, R.string.japanese_pos_for_dictionary_export_group2_verb);
+    map.put(PosType.KA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ka_upper_bigrade_verb);
+    map.put(PosType.GA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ga_upper_bigrade_verb);
+    map.put(PosType.TA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ta_upper_bigrade_verb);
+    map.put(PosType.DA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_da_upper_bigrade_verb);
+    map.put(PosType.HA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ha_upper_bigrade_verb);
+    map.put(PosType.BA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ba_upper_bigrade_verb);
+    map.put(PosType.MA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ma_upper_bigrade_verb);
+    map.put(PosType.YA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ya_upper_bigrade_verb);
+    map.put(PosType.RA_UPPER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ra_upper_bigrade_verb);
+    map.put(PosType.A_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_a_lower_bigrade_verb);
+    map.put(PosType.KA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ka_lower_bigrade_verb);
+    map.put(PosType.GA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ga_lower_bigrade_verb);
+    map.put(PosType.SA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_sa_lower_bigrade_verb);
+    map.put(PosType.ZA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_za_lower_bigrade_verb);
+    map.put(PosType.TA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ta_lower_bigrade_verb);
+    map.put(PosType.DA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_da_lower_bigrade_verb);
+    map.put(PosType.NA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_na_lower_bigrade_verb);
+    map.put(PosType.HA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ha_lower_bigrade_verb);
+    map.put(PosType.BA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ba_lower_bigrade_verb);
+    map.put(PosType.MA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ma_lower_bigrade_verb);
+    map.put(PosType.YA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ya_lower_bigrade_verb);
+    map.put(PosType.RA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_ra_lower_bigrade_verb);
+    map.put(PosType.WA_LOWER_BIGRADE_VERB, R.string.japanese_pos_for_dictionary_export_wa_lower_bigrade_verb);
     map.put(PosType.KURU_GROUP3_VERB, R.string.japanese_pos_for_dictionary_export_kuru_group3_verb);
     map.put(PosType.SURU_GROUP3_VERB, R.string.japanese_pos_for_dictionary_export_suru_group3_verb);
     map.put(PosType.ZURU_GROUP3_VERB, R.string.japanese_pos_for_dictionary_export_zuru_group3_verb);
