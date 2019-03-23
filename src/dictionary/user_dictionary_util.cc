@@ -1,3 +1,20 @@
+// Copyright 2018-2019 rekikananlp
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+//
+// This code originates from Mozc licensed as follows:
+//
 // Copyright 2010-2018, Google Inc.
 // All rights reserved.
 //
@@ -345,6 +362,29 @@ const char *kPosTypeStringTable[] = {
   "句読点",
   "独立語",
   "抑制単語",
+  "動詞カ行上二段",
+  "動詞ガ行上二段",
+  "動詞タ行上二段",
+  "動詞ダ行上二段",
+  "動詞ハ行上二段",
+  "動詞バ行上二段",
+  "動詞マ行上二段",
+  "動詞ヤ行上二段",
+  "動詞ラ行上二段",
+  "動詞ア行下二段",
+  "動詞カ行下二段",
+  "動詞ガ行下二段",
+  "動詞サ行下二段",
+  "動詞ザ行下二段",
+  "動詞タ行下二段",
+  "動詞ダ行下二段",
+  "動詞ナ行下二段",
+  "動詞ハ行下二段",
+  "動詞バ行下二段",
+  "動詞マ行下二段",
+  "動詞ヤ行下二段",
+  "動詞ラ行下二段",
+  "動詞ワ行下二段",
 };
 }  // namespace
 

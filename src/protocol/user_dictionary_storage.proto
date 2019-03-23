@@ -1,3 +1,20 @@
+// Copyright 2018-2019 rekikananlp
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+//
+// This code originates from Mozc licensed as follows:
+//
 // Copyright 2010-2018, Google Inc.
 // All rights reserved.
 //
@@ -85,6 +102,30 @@ message UserDictionary {
     FREE_STANDING_WORD = 43;  // "独立語"
 
     SUPPRESSION_WORD = 44;  // "抑制単語"
+
+    KA_UPPER_BIGRADE_VERB = 45;  // "動詞カ行上二段"
+    GA_UPPER_BIGRADE_VERB = 46;  // "動詞ガ行上二段"
+    TA_UPPER_BIGRADE_VERB = 47;  // "動詞タ行上二段"
+    DA_UPPER_BIGRADE_VERB = 48;  // "動詞ダ行上二段"
+    HA_UPPER_BIGRADE_VERB = 49;  // "動詞ハ行上二段"
+    BA_UPPER_BIGRADE_VERB = 50;  // "動詞バ行上二段"
+    MA_UPPER_BIGRADE_VERB = 51;  // "動詞マ行上二段"
+    YA_UPPER_BIGRADE_VERB = 52;  // "動詞ヤ行上二段"
+    RA_UPPER_BIGRADE_VERB = 53;  // "動詞ラ行上二段"
+    A_LOWER_BIGRADE_VERB = 54;  // "動詞ア行下二段"
+    KA_LOWER_BIGRADE_VERB = 55;  // "動詞カ行下二段"
+    GA_LOWER_BIGRADE_VERB = 56;  // "動詞ガ行下二段"
+    SA_LOWER_BIGRADE_VERB = 57;  // "動詞サ行下二段"
+    ZA_LOWER_BIGRADE_VERB = 58;  // "動詞ザ行下二段"
+    TA_LOWER_BIGRADE_VERB = 59;  // "動詞タ行下二段"
+    DA_LOWER_BIGRADE_VERB = 60;  // "動詞ダ行下二段"
+    NA_LOWER_BIGRADE_VERB = 61;  // "動詞ナ行下二段"
+    HA_LOWER_BIGRADE_VERB = 62;  // "動詞ハ行下二段"
+    BA_LOWER_BIGRADE_VERB = 63;  // "動詞バ行下二段"
+    MA_LOWER_BIGRADE_VERB = 64;  // "動詞マ行下二段"
+    YA_LOWER_BIGRADE_VERB = 65;  // "動詞ヤ行下二段"
+    RA_LOWER_BIGRADE_VERB = 66;  // "動詞ラ行下二段"
+    WA_LOWER_BIGRADE_VERB = 67;  // "動詞ワ行下二段"
   };
 
   // ID of this dictionary
