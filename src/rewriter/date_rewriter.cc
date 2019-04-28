@@ -1386,6 +1386,10 @@ const YearData kEraData[] = {
     1989,
     "平成",
     "へいせい",
+  }, {
+    2019,
+    "令和",
+    "れいわ",
   }
 };
 
@@ -1914,9 +1918,11 @@ bool DateRewriter::RewriteTime(Segment *segment,
         ConvertDateWithYear(t_st.tm_year + 1900, t_st.tm_mon + 1, t_st.tm_mday,
                             &results);
         if (AdToEra(t_st.tm_year + 1900, &era) && !era.empty()) {
-          results.push_back(Util::StringPrintf(
-              "%s年%d月%d日",
-              era[0].c_str(), t_st.tm_mon + 1, t_st.tm_mday));
+          for (int i = static_cast<int>(era.size()) - 2; i >= 0; --i) {
+            results.push_back(Util::StringPrintf(
+                "%s年%d月%d日",
+                era[i].c_str(), t_st.tm_mon + 1, t_st.tm_mday));
+          }
         }
         results.push_back(Util::StringPrintf("%s曜日",
                                              kWeekDayString[t_st.tm_wday]));
@@ -1948,9 +1954,11 @@ bool DateRewriter::RewriteTime(Segment *segment,
         }
         const int year = (t_st.tm_year + diff + 1900);
         if (AdToEra(year, &era) && !era.empty()) {
-          Insert(cand, insert_idx,
-                 Util::StringPrintf("%s年", era[0].c_str()),
-                 description, segment);
+          for (int i = static_cast<int>(era.size()) - 2; i >= 0; --i) {
+            Insert(cand, insert_idx,
+                   Util::StringPrintf("%s年", era[i].c_str()),
+                   description, segment);
+          }
         }
         Insert(cand, insert_idx, Util::StringPrintf("%d年", year),
                description, segment);
